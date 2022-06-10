@@ -1,0 +1,12 @@
+name: task-management-app
+on: [ push ]
+jobs:
+  task-management-app:
+    runs-on: ubuntu latest
+    steps:
+      - name: Checkout Code
+      - uses: actions/checkout@v2
+      
+      - run: cd src
+      - run: yarn install
+      - run: yarn test
